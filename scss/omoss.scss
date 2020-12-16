@@ -1,0 +1,40 @@
+/* början av "om oss" artikeln */
+span {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .omoss-container, .kontaktformular-container {
+    *border: 1px solid #d11a1a;
+    margin-bottom: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .omoss, .kontaktformular-container {
+    *border: 1px solid #d11a1a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .bild {
+    *border: 1px solid green;
+    width: 150px;
+  }
+  
+  .title {
+    *border: 1px solid #d1721a;
+    font-family: "Dancing Script", cursive;
+    padding-bottom: 20px;
+  }
+  
+  .gruppett {
+    *border: 1px solid #3c1ad1;
+    width: 400px;
+    padding: 20px;
+  }
+  
+  /* slutet av "om oss" artikeln */

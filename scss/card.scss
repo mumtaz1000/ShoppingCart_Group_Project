@@ -1,0 +1,75 @@
+/* början av styling av cards/items */
+
+
+.main-header-container{
+  margin:5vh 5vw;
+  text-align: center;
+}
+
+.main-header {
+  *border:red 3px solid;
+  font-family: "Dancing Script", cursive;
+  font-size:3rem;
+}
+
+.card {
+  *border: red solid 1px;
+  display: flex;
+  justify-content: center;
+  transition: 0.1s;
+  flex-wrap: wrap;
+  padding-bottom: 10vh;
+}
+
+.card:hover {
+  box-shadow: 0 8px px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-item {
+  *border: 1px solid #3c1ad1;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width:220px;
+  padding: 20px 10px 20px;
+  margin:20px;
+}
+
+.card-img {
+  height: 11rem;
+  width: 11rem;
+  margin-bottom:10px;
+}
+
+.card-p {
+  *border: rgb(243, 9, 192) 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:0.8rem;
+  width: 175px;
+  height:95px;
+  margin-left:10px;
+  margin-bottom: 25px;
+  text-align:left;
+}
+
+.buy-btn {
+  background-color: #2ea44f;
+  color: white;
+  padding: 10px;
+  width: 60%;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+}
+.buy-btn:hover {
+  background-color: rgb(18, 129, 23);
+}
+
+.pris {
+  color: #c5004a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:1.2rem;
+  margin-bottom:10px;
+}
+
+/* slutet av styling av cards/items i main  */

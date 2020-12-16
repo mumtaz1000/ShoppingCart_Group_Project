@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>Administraion Card edit page</h2>
+    <form>
+    <fieldset>
+      <legend>Insert Card info</legend>
+      <input id="cardTitle" type="text" placeholder="Enter card title...." />
+      <input
+        id="cardDescription"
+        type="text"
+        placeholder="Enter Description...."
+      />
+      <input id="cardPrice" type="text" placeholder="Enter Price...." />
+      <input type="file" id="myFileInput" />
+      <button type="button" id="btnInsert">Create a Card</button>
+    </fieldset>
+    <fieldset>
+      <label>
+        <input
+          id="deleteKey"
+          type="text"
+          placeholder="Write down what you want to delete..."
+        />
+
+        <button type="button" id="btnDeleteAll" onclick="">
+          Delete All
+        </button>
+      </label>
+    </fieldset>
+    <fieldset>
+
+      <label> Product Card </label>
+      <div class="cardOutput">
+        <img src="" height="200" alt="Card image preview" />
+      </div>
+    </form>
+    </fieldset>
+    <script>
+   const btn = document.querySelector("#btnInsert");
+   const btnImage = document.querySelector("#myFileInput");
+ 
+btn.addEventListener("click", addToLocalStorage )
+//en lista av objekt 
+let item= JSON.parse(localStorage.getItem("product"))||[];
+
+function addToLocalStorage(e){ 
+  e.preventDefault();
+   let product = {}
+   const title= document.querySelector("#cardTitle").value;
+   const description= document.querySelector("#cardDescription").value;
+   const price = document.querySelector("#cardPrice").value;
+   const cardOutput = document.querySelector(".cardOutput");
+  
+if(title!=""){
+  product = {
+  id:new Date().getTime(),
+  title : title,
+  description : description,
+  price : price
+  };
+
+  item.push(product);
+  localStorage.setItem("item",JSON.stringify(item));
+ 
+        cardOutput.innerHTML += `<div style="text-align:center">
+        <h1 > ${product.title} </h1>  <br />
+        id: ${product.id}<br />
+        ${product.description}
+     </div>
+        `;
+}}
+
+
+    </script>
+  </body>
+</html>

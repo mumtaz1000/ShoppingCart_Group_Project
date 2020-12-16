@@ -1,0 +1,17 @@
+//Sass guide länk: https://sass-lang.com/guide
+@import "header.scss";
+@import "card.scss";
+@import "reset.scss";
+@import "loggain.scss";
+@import "omoss.scss";
+@import "kontakt.scss";
+@import "footer.scss";
+@import "cart.scss";
+
+body {
+  display: flex;
+  place-content: end;
+  flex-direction: column;
+  height: 100vh;
+}
+

@@ -1,0 +1,576 @@
+@charset "UTF-8";
+/* Början av header + navbar /sandra */
+header {
+  *border: 1px solid red;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(231, 23, 23, 0), rgba(255, 255, 255, 0.945), white), url("Bilder/nice-christmas-packages-white-table.jpg");
+  background-size: 100%;
+  padding-top: 20vw;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 6vh;
+}
+
+h1 {
+  *border: 1px solid #fa0efa;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 9vw;
+  color: #364936;
+  padding: 7vw;
+}
+
+nav {
+  *border: 1px solid blue;
+  width: 75vw;
+  height: auto;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+  *border: 1px solid #ffa600;
+}
+
+#nav-bar {
+  *border: 1px solid lightgreen;
+  width: 74.5vw;
+  height: 53px;
+  list-style-type: none;
+  background-color: #e7e7e7;
+  border-radius: 25px;
+}
+
+li {
+  background-color: #e7e7e7;
+  border-radius: 25px;
+  list-style-type: none;
+  float: left;
+  margin: 3px;
+}
+
+li:last-child {
+  border-radius: 25px;
+}
+
+li a {
+  border-radius: 25px;
+  display: block;
+  color: #696969;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  border-radius: 25px;
+  background-color: #c7c7c7;
+}
+
+.active {
+  border-radius: 25px;
+  background-color: #bbd4bc;
+}
+
+.cart {
+  float: right;
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    margin-bottom: 40px;
+    width: 100vw;
+    height: 35vh;
+    margin-bottom: 55vh;
+  }
+
+  nav, .loggain, .cart {
+    float: none;
+  }
+
+  .cart {
+    width: 74vw;
+  }
+
+  #nav-bar, li {
+    float: none;
+  }
+
+  li {
+    border: solid white 5px;
+    margin: 0px;
+  }
+}
+/* slutet av navbar */
+/* början av styling av cards/items */
+.main-header-container {
+  margin: 5vh 5vw;
+  text-align: center;
+}
+
+.main-header {
+  *border: red 3px solid;
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+
+.card {
+  *border: red solid 1px;
+  display: flex;
+  justify-content: center;
+  transition: 0.1s;
+  flex-wrap: wrap;
+  padding-bottom: 10vh;
+}
+
+.card:hover {
+  box-shadow: 0 8px px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container-item {
+  *border: 1px solid #3c1ad1;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 220px;
+  padding: 20px 10px 20px;
+  margin: 20px;
+}
+
+.card-img {
+  height: 11rem;
+  width: 11rem;
+  margin-bottom: 10px;
+}
+
+.card-p {
+  *border: #f309c0 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  width: 175px;
+  height: 95px;
+  margin-left: 10px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.buy-btn {
+  background-color: #2ea44f;
+  color: white;
+  padding: 10px;
+  width: 60%;
+  border-radius: 25px;
+  font-weight: bold;
+  border: none;
+}
+
+.buy-btn:hover {
+  background-color: #128117;
+}
+
+.pris {
+  color: #c5004a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* slutet av styling av cards/items i main  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Början loggain styling på index.html*/
+nav .loggain {
+  background-color: #54aa54;
+  float: right;
+  padding: 10px;
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  width: 150px;
+  height: 45px;
+  margin: 3px;
+  text-decoration: none;
+}
+
+nav .loggain a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .loggain a:hover a:visited {
+  background-color: green;
+  color: white;
+  text-decoration: none;
+}
+
+/* början av stylingen till loggain-knappen på loggain.html  */
+.loginDiv,
+.card-update-div,
+.creating-card {
+  display: none;
+}
+
+.loginDiv {
+  padding: 30px;
+  background-color: #f1efef;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 260px;
+  text-align: center;
+}
+
+#username, #password {
+  margin-bottom: 20px;
+}
+
+input {
+  border-radius: 25px;
+  padding: 10px;
+  border: none;
+  text-align: center;
+}
+
+.login-btn {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+}
+
+.creating-card {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #e4e4e4;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  width: 260px;
+}
+
+/* slutet av stylingen */
+/* början av "om oss" artikeln */
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.omoss-container, .kontaktformular-container {
+  *border: 1px solid #d11a1a;
+  margin-bottom: 150px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.omoss, .kontaktformular-container {
+  *border: 1px solid #d11a1a;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.bild {
+  *border: 1px solid green;
+  width: 150px;
+}
+
+.title {
+  *border: 1px solid #d1721a;
+  font-family: "Dancing Script", cursive;
+  padding-bottom: 20px;
+}
+
+.gruppett {
+  *border: 1px solid #3c1ad1;
+  width: 400px;
+  padding: 20px;
+}
+
+/* slutet av "om oss" artikeln */
+/* Början av styling av kontaktformulär  */
+.kontakt-section {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(77, 109, 77, 0.315);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Dancing Script", cursive;
+}
+
+.kontakt-container {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #74ac66;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.form-h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.form-div {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  position: relative;
+}
+
+.form-div.success input {
+  border: 2px solid green;
+}
+
+.form-div.success i.fa-check-circle {
+  color: green;
+  visibility: visible;
+}
+
+.form-div.error input {
+  border: 2px solid #aa260f;
+}
+
+.form-div.error i.fa-exclamation-circle {
+  color: #801e00;
+  visibility: visible;
+}
+
+.form-div i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.form-div small {
+  visibility: hidden;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  font-size: 1vw;
+}
+
+.form-div.error small {
+  visibility: visible;
+  color: red;
+}
+
+.form-div input,
+.form-div textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid #305a43;
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type=submit] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  color: #87a573;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Dancing Script", cursive;
+}
+
+button[type=submit]:hover {
+  background-color: #495a41;
+}
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  color: #ffff;
+  width: 100%;
+  background-color: rgba(41, 71, 53, 0.863);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.footer-h2 {
+  font-size: 1.3rem;
+  padding: 30px 0px;
+  color: #f3f3f3;
+}
+
+.section, .section-popular, .section-nyhetsbrev {
+  margin: 30px;
+  width: 300px;
+}
+
+footer .content a {
+  text-decoration: none;
+  padding: 15px 0px;
+  display: block;
+  color: #ffff;
+  opacity: 0.65;
+}
+
+footer .content a:hover {
+  opacity: 1;
+  color: rgba(248, 248, 248, 0.993);
+  font-size: 18px;
+}
+
+#email {
+  margin-bottom: 20px;
+}
+
+footer input {
+  border-style: solid;
+  width: 100%;
+  line-height: 24px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border-width: 2px;
+}
+
+footer input[type=email] {
+  background-color: rgba(252, 252, 252, 0.486);
+  color: #375037;
+}
+
+footer input[type=email]:hover,
+footer input[type=email]:focus {
+  background-color: #f7f2f2;
+}
+
+footer input[type=submit] {
+  color: #495a41;
+}
+
+footer input[type=submit]:hover {
+  background-color: rgba(97, 134, 112, 0.568);
+  color: #ffff;
+}
+
+footer .social {
+  position: relative;
+  left: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+footer .social i {
+  font-size: 32px;
+  padding: 12px;
+  text-align: center;
+}
+
+footer .social i:hover {
+  position: relative;
+  top: -5px;
+}
+
+footer .notice {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 30px 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.479);
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.863);
+}
+
+.products-container {
+  max-width: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.products-container button {
+  padding: 5px;
+  color: red;
+}
+
+.product img {
+  height: 11rem;
+  width: 11rem;
+  margin-bottom: 10px;
+}
+
+.product-header {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid lightgrey;
+  margin: 0 auto;
+}
+
+.product-title {
+  width: 45%;
+}
+
+.price {
+  width: 15%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.total {
+  width: 15%;
+  border-bottom: 4px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 30%;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.products {
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid lightgrey;
+}
+
+body {
+  display: flex;
+  place-content: end;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

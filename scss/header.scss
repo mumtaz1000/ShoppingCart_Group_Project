@@ -1,0 +1,106 @@
+/* Början av header + navbar /sandra */
+header {
+  *border: 1px solid red;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(231, 23, 23, 0), rgba(255, 255, 255, 0.945), white), url("Bilder/nice-christmas-packages-white-table.jpg");
+  background-size: 100%;
+  padding-top: 20vw;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 6vh;
+}
+
+h1 {
+  *border: 1px solid #fa0efa;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 9vw;
+  color: #364936;
+  padding: 7vw;
+}
+
+nav {
+  *border: 1px solid blue;
+  width: 75vw;
+  height: auto;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+  *border: 1px solid #ffa600;
+}
+
+#nav-bar {
+  *border: 1px solid lightgreen;
+  width: 74.5vw;
+  height: 53px;
+  list-style-type: none;
+  background-color: #e7e7e7;
+  border-radius: 25px;
+}
+
+li {
+  background-color: #e7e7e7;
+  border-radius: 25px;
+  list-style-type: none;
+  float: left;
+  margin: 3px;
+}
+
+li:last-child {
+  border-radius: 25px;
+}
+
+li a {
+  border-radius: 25px;
+  display: block;
+  color: #696969;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  border-radius: 25px;
+  background-color: #c7c7c7;
+}
+
+.active {
+  border-radius: 25px;
+  background-color: #bbd4bc;
+}
+
+.cart {
+  float: right;
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    margin-bottom: 40px;
+    width: 100vw;
+    height: 35vh;
+    margin-bottom: 55vh;
+
+  }
+
+  nav, .loggain, .cart {
+    float: none;
+    
+  }
+
+  .cart {
+    width: 74vw;
+  }
+
+  #nav-bar, li {
+    float: none;
+  }
+
+  li {
+    border: solid white 5px;
+    margin: 0px;
+  }
+}
+/* slutet av navbar */

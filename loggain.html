@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="login.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    
+      <div class="main-header-container"><span class="main-header">Admin login</span><hr></div>
+
+
+    <button
+      class="login-btn"
+      type="button"
+      onclick="document.getElementById('loginDiv').style.display='block'"
+      style="width: 260px; margin-bottom: 5px"
+    >
+      Press to start the log in
+    </button>
+
+    <div id="loginDiv" class="loginDiv">
+      <label for="uname"><b>Username</b></label>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        name="uname"
+        id="username"
+        required
+      />
+      <label for="password"><b>Password</b></label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="password"
+        id="password"
+        required
+      />
+      <button type="submit" onclick="checkFunction()">Login</button>
+    </div>
+    <br />
+    <div id="card-info">
+      <button type="button" class="creating-card" id="creating-card">
+        <a href="cardLocalStorage.html">Press to create cards</a>
+      </button>
+    </div>
+
+
+    <!-- Admin login section-->
+    <div id="loginDiv" class="loginDiv">
+      <label for="uname"><b>Username</b></label>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        name="uname"
+        id="username"
+        required
+      />
+      <label for="password"><b>Password</b></label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        name="password"
+        id="password"
+        required
+      />
+      <button type="submit" onclick="checkFunction()">Login</button>
+    </div>
+
+    <div id="card-update-div" class="card-update-div" style="width: auto">
+      <h2>Administraion Card edit page</h2>
+      <fieldset>
+        <legend>Insert Card info</legend>
+        <input id="cardKey" type="text" placeholder="Enter title...." />
+        <input id="cardInput" type="text" placeholder="Enter Value...." />
+        <button type="button" id="btnInsert">Insert Data</button>
+      </fieldset>
+      <fieldset>
+        <label> You entered </label>
+        <div class="cardOutput"></div>
+      </fieldset>
+      </div>
+
+  </body>
+</html>

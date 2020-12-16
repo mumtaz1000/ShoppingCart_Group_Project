@@ -1,0 +1,103 @@
+/* Början av styling av kontaktformulär  */
+.kontakt-section {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(77, 109, 77, 0.315);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Dancing Script", cursive;
+  }
+  
+  .kontakt-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #74ac66;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .form-h3 {
+    text-align: center;
+    font-size:2rem;
+  }
+  
+  .form-div {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    position: relative;
+  }
+  
+  .form-div.success input {
+    border: 2px solid green;
+  }
+  
+  .form-div.success i.fa-check-circle {
+    color: green;
+    visibility: visible;
+  }
+  
+  .form-div.error input {
+    border: 2px solid #aa260f;
+  }
+  
+  .form-div.error i.fa-exclamation-circle {
+    color: #801e00;
+    visibility: visible;
+  }
+  
+  .form-div i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+  }
+  
+  .form-div small {
+    visibility: hidden;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    font-size: 1vw;
+  }
+  
+  .form-div.error small {
+    visibility: visible;
+    color: red;
+  }
+  
+  .form-div input,
+  .form-div textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #305a43;
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button[type=submit] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    color: #87a573;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Dancing Script", cursive;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #495a41;
+  }
