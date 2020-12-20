@@ -3,76 +3,112 @@
   <head> </head>
   <body>
     <h2>Administraion Card edit page</h2>
-    <form>
-    <fieldset>
-      <legend>Insert Card info</legend>
-      <input id="cardTitle" type="text" placeholder="Enter card title...." />
-      <input
-        id="cardDescription"
-        type="text"
-        placeholder="Enter Description...."
-      />
-      <input id="cardPrice" type="text" placeholder="Enter Price...." />
-      <input type="file" id="myFileInput" />
-      <button type="button" id="btnInsert">Create a Card</button>
-    </fieldset>
-    <fieldset>
-      <label>
+    <form id="CardForm">
+      <fieldset>
+        <legend>Insert Card info</legend>
+        <input id="cardTitle" type="text" placeholder="Enter card title...." />
         <input
-          id="deleteKey"
+          id="cardDescription"
           type="text"
-          placeholder="Write down what you want to delete..."
+          placeholder="Enter Description...."
         />
+        <input id="cardPrice" type="text" placeholder="Enter Price...." />
 
-        <button type="button" id="btnDeleteAll" onclick="">
-          Delete All
-        </button>
-      </label>
-    </fieldset>
-    <fieldset>
-
-      <label> Product Card </label>
-      <div class="cardOutput">
-        <img src="" height="200" alt="Card image preview" />
-      </div>
+        <button type="button" id="btnInsert">Create a Card</button>
+      </fieldset>
     </form>
-    </fieldset>
+    <div id="imgDiv" style="height: 100px">
+    </div>
+      <div style="display: flex;
+      flex-wrap:wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+      border: 5px solid white
+      ">
+        <div 
+        class="cardOutput" 
+        style="display:grid;
+        grid-template-columns: 25rem 25rem;
+        grid-template-rows:20rem 20rem ;">
+
+        </div>
+      </div>
+    </div>
     <script>
-   const btn = document.querySelector("#btnInsert");
-   const btnImage = document.querySelector("#myFileInput");
- 
-btn.addEventListener("click", addToLocalStorage )
-//en lista av objekt 
-let item= JSON.parse(localStorage.getItem("product"))||[];
+const btn = document.querySelector("#btnInsert");
+btn.addEventListener("click", addToLocalStorage);
+      //en lista av objekt
+let count = 0;
+function addToLocalStorage(e) {
+    e.preventDefault();
+    const title = document.querySelector("#cardTitle").value;
+    const description = document.querySelector("#cardDescription").value;
+    const price = document.querySelector("#cardPrice").value;
+    const cardOutput = document.querySelector(".cardOutput");
+    var imgDiv = document.querySelector(".imgDiv");
+    var img = document.createElement("img");
+    img.style.height = "100px";
+    count += 1;
+    let url = "Bild/img" + count + ".jpg";
+    //img.src = url;
+    let product = {};
+    if (title != "") {
+        product = {
+        id: new Date().getTime(),
+        title: title,
+        description: description,
+        price: price,
+        img: url,
+          };
+          
+    if(localStorage.getItem('data') === null){
+        var items = [];
+        items.push(product);
+        localStorage.setItem('data',JSON.stringify(items));
+          } else {
+        var items = JSON.parse(localStorage.getItem('data'));
+        items.push(product);
+        localStorage.setItem('data',JSON.stringify(items)); }
+    var btn = document.querySelector("#CardForm");
+    btn.reset();
+    }getItems();   
+}
+function getItems(){
+    var items = JSON.parse(localStorage.getItem("data"));
+    var ShowCard = document.querySelector(".cardOutput");
+    ShowCard.innerHTML = '';
+    for(var i=0; i<items.length; i++)
+    {
+        var id= items[i].id;
+        var title = items[i].title;
+        var description = items[i].description;
+        var url = items[i].img;
+        var price = items[i].price
 
-function addToLocalStorage(e){ 
-  e.preventDefault();
-   let product = {}
-   const title= document.querySelector("#cardTitle").value;
-   const description= document.querySelector("#cardDescription").value;
-   const price = document.querySelector("#cardPrice").value;
-   const cardOutput = document.querySelector(".cardOutput");
-  
-if(title!=""){
-  product = {
-  id:new Date().getTime(),
-  title : title,
-  description : description,
-  price : price
-  };
-
-  item.push(product);
-  localStorage.setItem("item",JSON.stringify(item));
- 
-        cardOutput.innerHTML += `<div style="text-align:center">
-        <h1 > ${product.title} </h1>  <br />
-        id: ${product.id}<br />
-        ${product.description}
-     </div>
-        `;
-}}
-
-
+        ShowCard.innerHTML += 
+        '<div>'+
+        '<h2>'+ title + '</h2>'+
+        '<img src='+url+' style="height:100px"/> </br>'+
+        '<p>'+ description + '</p>'+
+        '<p>'+ price + '</p>'+
+        '<button type="button" onclick="deleteItems(\''+id+'\')">Delete</button>'
+        +'</div>';
+    }
+}
+function deleteItems(id){
+    var items = JSON.parse(localStorage.getItem('data'));
+    for(var i=0; i<items.length; i++)
+    {
+        if(items[i].id == id){
+            items.splice(i,1);
+        }
+    }
+    localStorage.setItem('data',JSON.stringify(items));
+    getItems();
+}
+getItems();  
     </script>
   </body>
 </html>
