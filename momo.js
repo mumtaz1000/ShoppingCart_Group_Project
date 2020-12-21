@@ -137,9 +137,9 @@ function displayCart(){
             ${item.price}.00 sek
             </div>
             <div class="quantity">
-            <button type="button"> - </button>
+            
             <span>${item.inCart}</span>
-            <button type="button"> + </button>
+            
             </div>
             <div class="total">
             ${item.inCart * item.price}.00 sek
