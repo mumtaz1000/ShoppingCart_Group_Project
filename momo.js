@@ -124,41 +124,50 @@ function displayCart(){
     let cartCost = localStorage.getItem("totalCost");
     if(cartItems && productContainer){
         productContainer.innerHTML = '';
-        Object.values(cartItems).map(item=>{
+        
+        
+        Object.values(cartItems).map((value)=>{
             productContainer.innerHTML += `
-            <div class="product">
-            <button type="button" >
-            x
-            </button>
-            <img src="Bilder/${item.tag}.jpg" >
-            <span>${item.name}</span>
-            </div>
-            <div class="price">
-            ${item.price}.00 sek
-            </div>
-            <div class="quantity">
-            
-            <span>${item.inCart}</span>
-            
-            </div>
-            <div class="total">
-            ${item.inCart * item.price}.00 sek
-            </div>
+            <div style="margin:10px;">
+            <img src="Bilder/${value.tag}.jpg" 
+            style="height:100px">
+            <div style="margin:auto;">
+            <p><h5>Produkt: </h5>
+            ${value.name}<br>
+            <h5>Pris: </h5>
+            ${value.price}.00 sek<br>
+            <h5>Antal: </h5>
+            ${value.inCart}<br>
+            <h5>Total: </h5>
+            ${value.inCart * value.price}.00 sek</p>
+            </div></div>
             `
         })
         productContainer.innerHTML += `
         <div class="basketTotalContainer">
         <h4 class="basketTotalTitle">
-        Basket Total
+        Att betala: 
         </h4>
         <h4 class="basketTotal">
         ${cartCost}.00 sek
-        </h4>
-
-        `
+        </h4> `
 
     }
+    
 }
+
+function subItem(value)
+{
+    value -= 1;
+    //localStorage.setItem("productsInCart");
+    console.log("The value is ", value);
+    console.log("Key is",keys);
+
+}
+
+function addItem(){
+            console.log("Add item function");
+                }
 
 onLoadCartNumbers();
 displayCart();
