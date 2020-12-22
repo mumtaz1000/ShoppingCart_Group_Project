@@ -1,3 +1,4 @@
+
 .products-container{
     max-width:650px;
     display: flex;
@@ -8,11 +9,7 @@
     margin-top: 50px;
     margin-bottom: 100px;
     }
-.products-container button{
-    padding: 5px;
-    color:red;
 
-}
 
 .product img {
     height: 11rem;
@@ -25,36 +22,35 @@
     max-width: 850px;
     display:flex;
     justify-content: flex-start;
-    border-bottom: 4px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     margin:0 auto;
 }
 .product-title{
     width:45%;
 }
 .price{
-    width:15%;
-    border-bottom: 1px solid lightgrey;
+    width:20%;
     display:flex;
     align-items: center;
 }
 .total{
     width:15%;
-    border-bottom: 4px solid lightgrey;
     display:flex;
     align-items: center;
 }
 .quantity{
     width:30%;
-    border-bottom: 1px solid lightgrey;
     display:flex;
     align-items: center;
 }
 .products{
-    width:45%;
+    width:100%;
     display:flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid lightgrey;
-
+}
+.products > div{
+display: flex;
+min-width: 100%;
 }
